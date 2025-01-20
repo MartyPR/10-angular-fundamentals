@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
+import { CardsComponent } from '../../../components/cards/cards.component';
 
 @Component({
   selector: 'app-insights',
-  imports: [],
+  imports: [CardsComponent],
   templateUrl: './insights.component.html',
   styleUrl: './insights.component.scss'
 })
 export class InsightsComponent {
-  insights = [
+  insightsData = [
     {
       number: '01',
       name: 'Luke Voiles',
@@ -49,4 +50,8 @@ export class InsightsComponent {
       textClass: 'insights__text'
     }
   ];
+
+  onArticleClicked(articleName: string) {
+    console.log('Artículo seleccionado:', articleName);
+  }
 }

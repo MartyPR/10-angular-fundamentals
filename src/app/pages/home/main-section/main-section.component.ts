@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { HeroComponent } from '../hero/hero.component';
 import { CarouselComponent } from '../../../components/carousel/carousel.component';
-import { SponsorSectionComponent } from '../sponsor-section/sponsor-section.component';
 import { ProductSectionComponent } from '../product-section/product-section.component';
 import { InsightsComponent } from '../insights/insights.component';
+import { SponsorSectionComponent } from '../sponsor-section/sponsor-section.component';
 
 @Component({
   selector: 'app-main-section',

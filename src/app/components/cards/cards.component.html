@@ -1,5 +1,6 @@
+<ul class="insights__list" role="list" aria-labelledby="insights-title">
 @for (item of insights; track $index) {
-    <li class="insights__item">
+    <li class="insights__item" (click)="onSelectArticle(item.name)">
       <article class="insights__article {{ item.additionalClass }}">
         <p class="insights__number" aria-hidden="true">{{ item.number }}</p>
         <div class="insights__personal {{ item.personalClass }}">
@@ -13,3 +14,4 @@
       </article>
     </li>
   }
+</ul>

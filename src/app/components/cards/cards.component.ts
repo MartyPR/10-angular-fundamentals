@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cards',
@@ -17,4 +17,10 @@ export class CardsComponent {
     personalClass?: string;
     textClass?: string;
   }> = [];
+
+  @Output() articleSelected = new EventEmitter<string>(); // Emitirá el nombre del artículo seleccionado
+
+  onSelectArticle(articleName: string) {
+    this.articleSelected.emit(articleName);
+  }
 }
