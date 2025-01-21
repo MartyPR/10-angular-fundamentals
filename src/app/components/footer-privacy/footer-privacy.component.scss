@@ -27,9 +27,6 @@
       display: inline-flex;
     }
 
-    &__logos a,svg{
-
-    }
     &__icon{
         fill: var(--color-text);
         @include mix.size(vars.$spacing-medium, vars.$spacing-medium);
