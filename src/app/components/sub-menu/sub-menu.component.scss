@@ -10,13 +10,10 @@
   overflow: hidden;
   background-color: #0d0d0d;
   backdrop-filter: blur(100px);
-  // visibility: hidden;
   transition: max-height 5s ease, opacity 0.5s ease;
-  // opacity: 0;
   padding-bottom: vars.$spacing-large;
   border-radius: vars.$size-small;
   z-index: 99;
-
   &-products--open {
     max-height: 510px;
     visibility: visible;
@@ -46,9 +43,6 @@
   }
   
 }
-
-
-
 
 .card{
   transform: translateX(0%) translateZ(0px);
@@ -92,8 +86,6 @@
     color: vars.$color-text;
   }
 }
-
-
 .submenu{
   &__separator {
     opacity: 0.2;
