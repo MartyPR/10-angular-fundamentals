@@ -3,51 +3,7 @@
 
 
 .insights {
-    padding-bottom: 7.5rem;
-    position: static;
-    background-color: hsl(0, 0%, 5%);
-    justify-content: center; /* Centrar el contenido dentro horizontalmente */
-    align-items: center;
-    &__data {
-      @include mix.flex(row, space-between, stretch);
-      @include mix.container(0, 75rem);
-      margin-bottom: vars.$size-medium;
-      flex-direction: row;
-      & p {
-        @include mix.text-style(
-          vars.$font-secondary,
-          vars.$font-size-very-small,
-          vars.$font-weight-medium,
-          hsla(0, 0%, 90%, 0.6)
-        );
-        line-height: 1.2;
-        text-transform: uppercase;
-      }
-      & h4 {
-        @include mix.text-style(vars.$font-primary, 1.75rem, vars.$font-weight-medium, vars.$color-text);
-        margin-top: vars.$spacing-medium;
-        max-width: 75%;
-      }
-    }
-  
-    &__button {
-      @include mix.flex-center(row, flex-end);
-      width: 30%;
-      align-items: flex-end;
-      & a {
-        @include mix.flex-center(row, center);
-        @include mix.typography(vars.$font-size-small, vars.$font-weight-medium, inherit, vars.$color-text);
-        text-decoration: none;
-        display: inline-flex;
-        outline: 2px solid transparent;
-        border-radius: vars.$border-radius-small;
-        transition: all 100ms ease-in-out;
-        height: 2.5rem;
-        padding: 0 vars.$size-small;
-        background-color: rgba(255, 255, 255, 0.05);
-      }
-    }
-  
+
     &__cards {
       @include mix.container(0, 75rem);
       margin-top: vars.$spacing-small;
