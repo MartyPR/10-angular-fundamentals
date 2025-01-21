@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <nav class="navbar__submenu-products navbar__submenu" role="menu" aria-label="Product Submenu">
     <div class="navbar__submenu-container">
         <p>{{title}}</p>
@@ -30,3 +31,12 @@
     </div>
 
  </nav>
+=======
+<menu>
+  @for (item of items(); track $index) {
+    <li (click)="handleClick(item)"><a [tabindex]="$index" href="#">{{item}}</a></li>
+  }
+
+  <!-- <li *ngFor="let item of items(); index as i"><a [tabindex]="i" href="#">{{item}}</a></li> -->
+</menu>
+>>>>>>> 1bdb79270d4894d0982ab3287b881b3ae77b3143
