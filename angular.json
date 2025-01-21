@@ -3,11 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-<<<<<<< HEAD
     "pipepage": {
-=======
-    "sketch-angular": {
->>>>>>> 1bdb79270d4894d0982ab3287b881b3ae77b3143
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -21,11 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-<<<<<<< HEAD
             "outputPath": "dist/pipepage",
-=======
-            "outputPath": "dist/sketch-angular",
->>>>>>> 1bdb79270d4894d0982ab3287b881b3ae77b3143
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -72,17 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-<<<<<<< HEAD
               "buildTarget": "pipepage:build:production"
             },
             "development": {
               "buildTarget": "pipepage:build:development"
-=======
-              "buildTarget": "sketch-angular:build:production"
-            },
-            "development": {
-              "buildTarget": "sketch-angular:build:development"
->>>>>>> 1bdb79270d4894d0982ab3287b881b3ae77b3143
             }
           },
           "defaultConfiguration": "development"
@@ -113,11 +98,8 @@
         }
       }
     }
-<<<<<<< HEAD
   },
   "cli": {
     "analytics": "85d18d19-afb0-4aec-b060-ef2274d60d9f"
-=======
->>>>>>> 1bdb79270d4894d0982ab3287b881b3ae77b3143
   }
 }

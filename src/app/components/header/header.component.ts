@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-<<<<<<< HEAD
 import { SubMenuComponent } from '../sub-menu/sub-menu.component';
 import { MenuSectionComponent } from '../menu-section/menu-section.component';
 import { MenuActionsComponent } from '../menu-actions/menu-actions.component';
@@ -7,18 +6,10 @@ import { MenuActionsComponent } from '../menu-actions/menu-actions.component';
 @Component({
   selector: 'app-header',
   imports: [MenuSectionComponent,MenuActionsComponent],
-=======
-import { MenuComponent } from '../menu/menu.component';
-
-@Component({
-  selector: 'app-header',
-  imports: [MenuComponent],
->>>>>>> 1bdb79270d4894d0982ab3287b881b3ae77b3143
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-<<<<<<< HEAD
   isSubMenuProductsVisible = false;
   isSubMenuSinginVisible = false;
   isSubMenuResourcerVisible = false;
@@ -97,7 +88,3 @@ export class HeaderComponent {
   }
 }
 
-=======
-
-}
->>>>>>> 1bdb79270d4894d0982ab3287b881b3ae77b3143
