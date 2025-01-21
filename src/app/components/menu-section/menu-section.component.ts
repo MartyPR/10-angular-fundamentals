@@ -8,6 +8,14 @@ import { SubMenuComponent } from '../sub-menu/sub-menu.component';
   styleUrl: './menu-section.component.scss'
 })
 export class MenuSectionComponent {
+
+  menuItems = [
+    { name: 'Products', link: '#', hasSubMenu: true, toggleMethod: 'toggleSubMenu' },
+    { name: 'Solutions', link: '#', hasSubMenu: false },
+    { name: 'Partners', link: '#', hasSubMenu: false },
+    { name: 'Resources', link: '#', hasSubMenu: true, toggleMethod: 'toggleSubMenuResourcer' }
+  ];
+
   isSubMenuProductsVisible = false;
   isSubMenuSinginVisible = false;
   isSubMenuResourcerVisible = false;

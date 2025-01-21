@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 import { NavFooterComponent } from '../nav-footer/nav-footer.component';
+import { FooterFormComponent } from '../footer-form/footer-form.component';
+import { FooterPrivacyComponent } from '../footer-privacy/footer-privacy.component';
+
 
 @Component({
   selector: 'app-footer',
-  imports: [NavFooterComponent],
+  imports: [NavFooterComponent,FooterFormComponent,FooterPrivacyComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+
+
   menuItems = [
     {
       title: 'Products',
@@ -41,4 +46,5 @@ export class FooterComponent {
       ]
     }
   ];
+
 }
