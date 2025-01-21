@@ -16,37 +16,75 @@
     padding-bottom: vars.$spacing-large;
     border-radius: vars.$size-small;
     z-index: 99;
+    &-products--open {
+        max-height: 510px;
+        visibility: visible;
+        opacity: 1;
+      }
+      &-container {
+        max-width: 100%;
+        padding: 0 vars.$spacing-large;
+      }
+      &-container p {
+        font-family: "IBM Plex Mono", serif;
+        font-size: vars.$font-size-very-small;
+        font-weight: vars.$font-weight-medium;
+        text-transform: uppercase;
+        color: vars.$color-gray-light;
+        line-height: 1.2;
+        margin-bottom: vars.$size-small;
+      }
+      
+      .nabvar__submenu--items {
+        gap: 2.38rem;
+        min-height: 22rem;
+        display: flex;
+      }
+      &-cards {
+        gap: vars.$size-small;
+        display: flex;
+      }
   }
-  .navbar__submenu-products--open {
-    max-height: 510px;
-    visibility: visible;
-    opacity: 1;
+  .submenu{
+    &__separator {
+        opacity: 0.2;
+      
+        border-style: 1px solid;
+        color: hsla(0, 0, 14%, 1);
+        display: block;
+      }
+      &__list {
+        opacity: 1;
+        padding-left: 2.38rem;
+        display: flex;
+        gap: 2.5rem;
+        max-width: 70%;
+        place-content: end flex_end;
+        justify-content: end;
+        padding-top:vars.$size-small ;
+        padding-bottom: vars.$size-small;
+        flex-direction: column;
+      }
+      &__option {
+        display: flex;
+        flex-direction: column;
+      }
+      &__option p {
+        font-family: "IBM Plex Mono", serif;
+        font-size: vars.$font-size-very-small;
+        color: vars.$color-gray-light;
+        margin-bottom: vars.$size-small;
+      }
+      &__option a {
+        font-size: vars.$spacing-medium;
+        line-height: 150%;
+        text-decoration: none;
+        color: vars.$color-text-light;
+      }
   }
-  .navbar__submenu-container {
-    max-width: 100%;
-    padding: 0 vars.$spacing-large;
-  }
-  .navbar__submenu-container p {
-    font-family: "IBM Plex Mono", serif;
-    font-size: vars.$font-size-very-small;
-    font-weight: vars.$font-weight-medium;
-    text-transform: uppercase;
-    color: vars.$color-gray-light;
-    line-height: 1.2;
-    margin-bottom: vars.$size-small;
-  }
-  
-  .nabvar__submenu--items {
-    gap: 2.38rem;
-    min-height: 22rem;
-    display: flex;
-  }
-  .navbar__submenu-cards {
-    gap: vars.$size-small;
-    display: flex;
-  }
-  .card,
-  .card__info {
+
+
+  .card{
     transform: translateX(0%) translateZ(0px);
     width: 289px;
     border-radius: vars.$border-radius-medium;
@@ -55,95 +93,78 @@
     cursor: pointer;
     align-items: flex-end;
     transition: 0.25s linear; //animacion que no pude
+    &__info {
+        transform: translateX(0%) translateZ(0px);
+        width: 289px;
+        border-radius: vars.$border-radius-medium;
+        background: #1e3c72;
+        overflow: hidden;
+        cursor: pointer;
+        align-items: flex-end;
+        transition: 0.25s linear; 
+      }
+
+      
+      & img {
+        padding:vars.$spacing-large;
+        position: absolute;
+        top: -3rem;
+      }
+      & p {
+        padding:vars.$spacing-large;
+        margin-top: 250px;
+        position: absolute;
+        font-family:vars.$font-primary;
+        font-size:vars.$spacing-large;
+        color: vars.$color-text;
+        text-transform: capitalize;
+      }
+      &__white {
+        background-color: rgb(197, 217, 217);
+        & p {
+            color: vars.$colot-text-dark;
+          }
+      }
+      
+
+      &__red {
+        background-color: #d7491d;
+        color: #0d0d0d;
+      }
+      &__black {
+        background-color: hsla(0, 0%, 10%, 1);
+        color: vars.$color-text;
+      }
+      &__info {
+        background-color: hsl(0, 0%, 10%);
+        & img {
+          margin: 0.55rem;
+          height: 210px;
+          position: relative;
+          background-size: cover;
+          overflow: hidden;
+          width: 270px;
+          border-radius: vars.$border-radius-medium;
+          object-fit: cover;
+        }
+        & p {
+          @include mix.text-style(vars.$font-primary, 0.875rem, 300, vars.$color-menu-link);
+          padding: 0 vars.$size-small;
+          margin-top: 2.5rem;
+          position: absolute;
+          color: vars.$color-text;
+          text-transform: capitalize;
+        }
+      }
   }
-  .card img {
-    padding:vars.$spacing-large;
-    position: absolute;
-    top: -3rem;
-  }
-  .card p {
-    padding:vars.$spacing-large;
-    margin-top: 250px;
-    position: absolute;
-    font-family:vars.$font-primary;
-    font-size:vars.$spacing-large;
-    color: vars.$color-text;
-    text-transform: capitalize;
-  }
-  .submenu__separator {
-    opacity: 0.2;
   
-    border-style: 1px solid;
-    color: hsla(0, 0, 14%, 1);
-    display: block;
-  }
-  .submenu__list {
-    opacity: 1;
-    padding-left: 2.38rem;
-    display: flex;
-    gap: 2.5rem;
-    max-width: 70%;
-    place-content: end flex_end;
-    justify-content: end;
-    padding-top:vars.$size-small ;
-    padding-bottom: vars.$size-small;
-    flex-direction: column;
-  }
-  .submenu__option {
-    display: flex;
-    flex-direction: column;
-  }
-  .submenu__option p {
-    font-family: "IBM Plex Mono", serif;
-    font-size: vars.$font-size-very-small;
-    color: vars.$color-gray-light;
-    margin-bottom: vars.$size-small;
-  }
-  .submenu__option a {
-    font-size: vars.$spacing-medium;
-    line-height: 150%;
-    text-decoration: none;
-    color: vars.$color-text-light;
-  }
-  .card__white {
-    background-color: rgb(197, 217, 217);
-  }
-  .card__white p {
-    color: vars.$colot-text-dark;
-  }
+ 
+
   .content.blur-active {
     filter: blur(10px);
     transition: filter 0.3s ease;
   }
-  .card__red {
-    background-color: #d7491d;
-    color: #0d0d0d;
-  }
-  .card__black {
-    background-color: hsla(0, 0%, 10%, 1);
-    color: vars.$color-text;
-  }
-  .card__info {
-    background-color: hsl(0, 0%, 10%);
-    & img {
-      margin: 0.55rem;
-      height: 210px;
-      position: relative;
-      background-size: cover;
-      overflow: hidden;
-      width: 270px;
-      border-radius: vars.$border-radius-medium;
-      object-fit: cover;
-    }
-    & p {
-      @include mix.text-style(vars.$font-primary, 0.875rem, 300, vars.$color-menu-link);
-      padding: 0 vars.$size-small;
-      margin-top: 2.5rem;
-      position: absolute;
-      color: vars.$color-text;
-      text-transform: capitalize;
-    }
-  }
+ 
   .black__text {
     color: vars.$colot-text-dark;
   }
