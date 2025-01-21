@@ -8,8 +8,29 @@ import { SubMenuComponent } from '../sub-menu/sub-menu.component';
   styleUrl: './menu-actions.component.scss'
 })
 export class MenuActionsComponent {
-  submenus = [
+  menuItems = [
+    {
+      id: 'company',
+      label: 'Company',
+      ariaLabel: 'Learn about our company',
+      isVisible: false,
+    },
+    {
+      id: 'signin',
+      label: 'Sign in',
+      ariaLabel: 'Sign in to your account',
+      isVisible: false,
+    },
+    {
+      id: 'demo',
+      label: 'Book a demo',
+      ariaLabel: 'Book a demo of our financial solutions',
+      isButton: true,
+    },
+  ];
+
   
+  submenus = [
     {
       title: 'Embedded Financial Services',
       classCard: 'card',

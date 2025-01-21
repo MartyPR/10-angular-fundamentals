@@ -1,28 +1,27 @@
-
 <div class="navbar__section">
     <nav class="navbar__menu" role="navigation">
         <ul class="navbar__menu-list">
-            <li class="navbar__menu-item"><button id="menu__product"
-                    class="navbar__menu-link menu__product " aria-expanded="false"
-                    aria-label="show sub menu" (mouseenter)="toggleSubMenu(true)"
-                    (mouseleave)="toggleSubMenu(false)">Products</button>
-
+            @for (item of menuItems; track $index) {
+            <li class="navbar__menu-item">
+                @if(item.hasSubMenu){
+                <button class="navbar__menu-link" (mouseenter)="toggleSubMenu(true)"
+                    (mouseleave)="toggleSubMenu(false)">
+                    {{ item.name }}
+                </button> }
+                @else {
+                <a class="navbar__menu-link" href="{{ item.link }}">
+                    {{ item.name }}
+                </a>
+                }
             </li>
-            <li class="navbar__menu-item "><a class="navbar__menu-link" href="#">Solutions</a></li>
-            <li class="navbar__menu-item"><a class="navbar__menu-link" href="#">Partners</a></li>
-            <li class="navbar__menu-item"><button (mouseenter)="toggleSubMenuResourcer(true)"
-                    (mouseleave)="toggleSubMenuResourcer(false)" class="navbar__menu-link menu__resource"
-                    href="#">Resources</button></li>
-
+            }
         </ul>
     </nav>
-
-
 </div>
 
 @if (isSubMenuProductsVisible){
-<app-sub-menu (mouseenter)="toggleSubMenu(true)" (mouseleave)="toggleSubMenu(false)"
-    [title]="submenus[0].title" [cards]="submenus[0].cards" [links]="submenus[0].links">
+<app-sub-menu (mouseenter)="toggleSubMenu(true)" (mouseleave)="toggleSubMenu(false)" [title]="submenus[0].title"
+    [cards]="submenus[0].cards" [links]="submenus[0].links">
 </app-sub-menu>
 }
 
@@ -32,4 +31,3 @@
     [classCard]="submenus[1].classCard">
 </app-sub-menu>
 }
-

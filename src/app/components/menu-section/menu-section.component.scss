@@ -17,10 +17,11 @@
       letter-spacing: 0.00625;
       text-decoration: none;
       cursor: pointer;
-      & svg {
-        color: hsl(0, 0%, 90%);
-        display: block;
-      }
+
+    }
+    &__link svg {
+      color: hsl(0, 0%, 90%);
+      display: block;
     }
   
     &__section {
@@ -31,11 +32,12 @@
     &__menu {
       @include mix.flex(row, flex-start, center, 1.25rem);
       padding-left: vars.$size-small;
-      &-list {
-        display: flex;
-        list-style: none;
-        gap: 1.2rem;
-      }
+
+    }
+    &__menu-list {
+      display: flex;
+      list-style: none;
+      gap: 1.2rem;
     }
   
     &__menu-item,

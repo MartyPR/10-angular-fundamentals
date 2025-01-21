@@ -34,17 +34,18 @@
   &__actions {
     @include mix.flex(row, flex-start, center, 1.25);
     gap: 1.25;
-    &-list {
-      @include mix.flex(row, flex-start, center, 1.25rem);
-      list-style: none;
-    }
-    &--separator {
-      font-size: 14px;
-      color: vars.$color-actions-separator;
-    }
-    &-link:hover {
-      color: vars.$color-text;
-    }
+
+  }
+  &__actions-list {
+    @include mix.flex(row, flex-start, center, 1.25rem);
+    list-style: none;
+  }
+  &__actions--separator {
+    font-size: 14px;
+    color: vars.$color-actions-separator;
+  }
+  &__actions-link:hover {
+    color: vars.$color-text;
   }
 
   &__button {
